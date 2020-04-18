@@ -1,0 +1,37 @@
+<div></div>
+<div  [className]="getClassName()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input  readonly matInput  value="Id" [(ngModel)]="user.id" (click)="onIdClick()">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput  value="Name" [(ngModel)]="user.name" >
+    </mat-form-field>
+    <br>  
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput  value="Email" [(ngModel)]="user.email" >
+    </mat-form-field>
+    <br>
+    <button class="greyColumnButton"   mat-flat-button color="accent"
+            (mouseenter)="shouldShowOtherData= true">Other Data</button>
+    <div *ngIf = "shouldShowOtherData" class ="addtionalFieldsDiv" (click)="shouldShowOtherData = false" > 
+      <mat-form-field class="example-full-width">
+        Street: <input matInput  value="street" [(ngModel)]="user.street" >
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        City: <input matInput  value="city" [(ngModel)]="user.city" >
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        Zip code: <input matInput  value="zipCode" [(ngModel)]="user.zipCode" >
+      </mat-form-field>
+    </div>
+    <div class="divider-bigWidth"></div>
+    <button class="yellowColumnButton"   mat-flat-button color="accent" (click)="onUpdate()">Update</button>
+    <div class="divider-smallWidth"></div>
+    <button class="yellowColumnButton"   mat-flat-button color="accent"  (click)="onDelete()">Delete</button>
+  </div>

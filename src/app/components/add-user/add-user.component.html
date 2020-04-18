@@ -1,0 +1,27 @@
+<h1>Add New User</h1>
+<div class="addUser">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter user name</mat-label>
+        <input matInput placeholder="some name" [formControl]="nameFormControl" required 
+        (keyup)="updateCanAdd()">
+        <mat-error *ngIf="nameFormControl.invalid">{{getNameErrorMessage()}}</mat-error>
+      </mat-form-field>
+        <br>
+        
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="emailFormControl" required
+          (keyup)="updateCanAdd()">
+          <mat-error *ngIf="emailFormControl.invalid">{{getMailErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      
+      
+      <div class="example-button-row" >
+          <button mat-flat-button color="accent" (click)="onCancel()"  >Cancel</button>
+          &nbsp;
+          <button mat-flat-button  color="accent" (click)="onAdd()" [disabled]="!canAdd">Add</button>
+      </div>
+</div>

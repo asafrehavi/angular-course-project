@@ -1,0 +1,11 @@
+<h1>Todos user:{{userId}}</h1>
+<div class="divider-bigWidth"></div>
+<button mat-flat-button color="accent" (click) = "onAdd()">Add</button>
+<table mat-ta class= "table table-striped">
+  <tbody>
+
+  <tr *ngFor="let singleTodo of todos " >
+    <app-todo class="todo" [todo] = singleTodo></app-todo>
+  </tr>
+  </tbody>
+</table>

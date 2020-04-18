@@ -1,0 +1,8 @@
+.example-full-width {
+    margin-left: 0.5rem;
+    width: calc(100% - 0.5rem);
+}
+.middle-width {
+    margin-left: 0.5rem;
+    width: calc(55% - 0.5rem);
+}

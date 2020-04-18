@@ -1,0 +1,10 @@
+<h1>Posts user:{{userId}}</h1>
+<div class="divider-bigWidth"></div>
+ <button mat-flat-button color="accent" (click) = "onAdd()">Add</button>
+<table mat-ta class= "table table-striped">
+  <tbody>
+  <tr *ngFor="let singlePost of posts " >
+    <app-post class="post" [post] = singlePost></app-post>
+  </tr>
+  </tbody>
+</table>

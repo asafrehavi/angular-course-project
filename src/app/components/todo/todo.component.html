@@ -1,0 +1,7 @@
+<mat-form-field class="example-full-width">
+     <input matInput placeholder= "Title" value="Title" [(ngModel)]="todo.title" > 
+</mat-form-field>
+<mat-form-field class="middle-width">
+  <input matInput placeholder= "Completed" value ="Completed"  [(ngModel)]="todo.completed"  >
+</mat-form-field>
+<button *ngIf="!todo.completed"  mat-flat-button color="accent" (click)="onMarkComplete()">Mark Complete</button>

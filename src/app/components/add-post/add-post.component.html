@@ -1,0 +1,25 @@
+<h1> New Post User:{{userId}}</h1>
+<div class="addPost">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter title</mat-label>
+        <input matInput placeholder="some title" [formControl]="titleFormControl" required (keyup)="updateCanAdd()">
+        <mat-error *ngIf="titleFormControl.invalid">{{getTitleErrorMessage()}}</mat-error>
+      </mat-form-field>
+        <br>
+        
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your body</mat-label>
+          <input matInput placeholder="Some body" [formControl]="bodyFormControl" required (keyup) ="updateCanAdd()">
+          <mat-error *ngIf="bodyFormControl.invalid">{{getBodyErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      
+      
+      <div class="example-button-row" >
+          <button mat-flat-button color="accent" (click)="onCancel()"  >Cancel</button>
+          &nbsp;
+          <button mat-flat-button  color="accent" (click)="onAdd()" [disabled]="!canAdd">Add</button>
+      </div>
+</div>

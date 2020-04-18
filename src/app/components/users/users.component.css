@@ -1,0 +1,35 @@
+.addButton {
+    float: left;
+    width: 30%;
+  }
+  .searchArea {
+    float: left;
+    width: 70%;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), 
+         local('MaterialIcons-Regular'), 
+         url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+  }
+  .divider-bigWidth{
+    width: 105px;;
+    height:0;
+    display:inline-block;
+}
+  
+  .material-icons {
+    font-family: 'Material Icons';
+  }
+  .inlineSearch {
+    display: inline;
+  }

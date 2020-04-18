@@ -1,0 +1,18 @@
+<div  class ="inlineSearch">
+<mat-form-field>
+  <input matInput type="search" placeholder="search here" class="search-input"
+  [(ngModel)]="searchText" (keyup)="onKeyUp()">
+  <mat-icon matPrefix>search</mat-icon>
+</mat-form-field>
+<div class="divider-bigWidth"></div>
+  <button mat-flat-button color="accent" (click) = "onAdd()">Add</button>
+</div>
+
+<table mat-ta class= "table table-striped">
+  <tbody>
+  <tr *ngFor="let singleUser of filteredUsers " >
+    <td><app-user [user] = singleUser 
+      ></app-user></td>
+  </tr>
+  </tbody>
+</table>

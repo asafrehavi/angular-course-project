@@ -1,7 +1,10 @@
 # FinalProject
-This project done at final project of angular course (yaniv arad)
+This project done at final project of angular course (yaniv arad).
+
 This project contains simple angular app at recommnded structure .
+
 The project use free API usage in order to demonstrate server
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Development server
